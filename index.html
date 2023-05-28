@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <title>Vubonic</title>
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="logoContainer">
+            <img src="assets/images/Logo.png" alt="" class="logo">
+            <div class="titulo">
+                <h2>Vubonic Vape Shop</h2>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#p1">Inicio</a></li>
+                <li><a href="#p2">Vapes</a></li>
+                <li><a href="#p3">Liquidos</a></li>
+                <li><a href="#p4">Contacto</a></li>
+            </ul>
+            <div id="session" class="session">
+                <a href="./pages/signIn.html">
+                    <p>Registrarse</p>
+                </a>
+                <a href="./pages/logIn.html">
+                    <p>Iniciar Session</p>
+                </a>
+            </div>
+            <div class="addToCart">
+                <input type="checkbox" id="sidebar">
+                <label for="sidebar">
+                    <p>Carrito de Compras</p>
+                    <object class="cart" data="assets/images/shopping-cart-thin.svg"> </object>
+                </label>
+
+                <div class="sidebar">
+                    <ul id="carProducts">
+                    </ul>
+                    <button class="vaciarCarrito" onclick="vaciarCarrito()">Vaciar Carrito</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <div class="inicio" id="p1">
+        <img src="assets/images/Fondo.jpg" alt="" class="image">
+        <div class="info">
+            <p class="text-1">Buvonic es la mejor tienda de Vapes. Contamos con las mejores marcas en vaporizadores
+                rellenables y vapes desechables, así como todos los líquidos y accesorios que necesitas, a los mejores
+                precios. Envíos en menos de 2-3 horas en CDMX, Envíos mismo día en Estado de México, Envíos express a
+                nivel
+                nacional.</p>
+            <a class="btn" href="#">Ver Mas</a>
+        </div>
+
+    </div>
+
+
+
+    <div class="vapes" id="p2">
+        <h1>Vapes</h1>
+        <p>Pods Desechables diseñados para personas que buscan un vapeo rapido, facil y sencillo. Las mejores marcas desechables , las tenemos aqui .</p>
+    </div>
+
+    <div class="cont-vape">
+
+        <div class="cont-vapes">
+
+            <img src="assets/images/mango.png" alt="" class="vape-imagen">
+            <h2 class="vape-tittle">Vape Mango</h2>
+            <p class="vape-text">Vape Desechable Sabor mango - 2500 puffs</p>
+            <button
+            onclick="añadirProducto('Vape Mango')"
+            class="car" id="car1">Añadir al carrito 200$</button>
+        </div>
+
+
+        <div class="cont-vapes">
+
+            <img src="assets/images/menta.png" alt="" class="vape-imagen">
+            <h2 class="vape-tittle">Vape Menta </h2>
+            <p class="vape-text">Vape Desechable Sabor menta - 2500 puffs</p>
+            <button
+            onclick="añadirProducto('Vape Cereza')"
+            class="car" id="car2">Añadir al carrito 200$</button>
+        </div>
+
+        <div class="cont-vapes">
+
+            <img src="assets/images/uva.png" alt="" class="vape-imagen">
+            <h2 class="vape-tittle">Vape Uva</h2>
+            <p class="vape-text">Vape Desechable Sabor Uva - 2500 puffs</p>
+            <button
+            onclick="añadirProducto('Vape Uva')"
+            class="car" id="car3">Añadir al carrito 200$</button>
+        </div>
+
+        <div class="cont-vapes">
+
+            <img src="assets/images/fresa.png" alt="" class="vape-imagen">
+            <h2 class="vape-tittle">Vape Fresa</h2>
+            <p class="vape-text">Vape Desechable Sabor fresa - 2500 puffs</p>
+            <button
+            onclick="añadirProducto('Vape Fresa')"
+            class="car" id="car3">Añadir al carrito 200$</button>
+        </div>
+
+        <div class="cont-vapes">
+
+            <img src="assets/images/cafe.png" alt="" class="vape-imagen">
+            <h2 class="vape-tittle">Vape Cafe </h2>
+            <p class="vape-text">Vape Desechable Sabor cafe - 2500 puffs </p>
+            <button
+            onclick="añadirProducto('Vape Naranja')"
+            class="car" id="car4">Añadir al carrito 200$</button>
+        </div>
+
+    </div>
+
+    <!-- Liquidos -->
+
+    <div class="vapes" id="p3">
+        <h1>Liquidos</h1>
+        <p>Los mejores liquidos artesanales con sabores a frutas. <br> Estas en Vubonic la vapeshop online donde encontraras todo lo que necesitas </p>
+    </div>
+
+    <div class="cont-vape">
+
+        <div class="cont-vapes">
+
+            <img src="assets/images/fondo3.png" alt="" class="vape-imagen">
+            <h2 class="vape-tittle">Liquido Manzana</h2>
+            <p class="vape-text">Liquido electronico sabor manzana - 30 ml</p>
+            <button 
+            onclick="añadirProducto('Liquido mango')"
+            class="car" id="car1">Añadir al carrito 340$</button>
+        </div>
+
+
+        <div class="cont-vapes">
+
+            <img src="assets/images/fondo3.png" alt="" class="vape-imagen">
+            <h2 class="vape-tittle">Liquido Menta</h2>
+            <p class="vape-text">Liquido electronico sabor menta - 30 ml</p>
+            <button
+            onclick="añadirProducto('Liquido Menta')"
+            class="car" id="car2">Añadir al carrito 300$</button>
+        </div>
+
+        <div class="cont-vapes">
+
+            <img src="assets/images/fondo3.png" alt="" class="vape-imagen">
+            <h2 class="vape-tittle">Liquido Chocolate</h2>
+            <p class="vape-text">Liquido electronico sabor chocolate - 30 ml </p>
+            <button 
+            onclick="añadirProducto('Liquido Chocoalte')"
+            class="car" id="car3">Añadir al carrito 350$</button>
+        </div>
+
+        <div class="cont-vapes">
+
+            <img src="assets/images/fondo3.png" alt="" class="vape-imagen">
+            <h2 class="vape-tittle">Liquido Fresa</h2>
+            <p class="vape-text">Liquido electronico sabor fresa - 30 ml</p>
+            <button 
+            onclick="añadirProducto('Liquido Fresa')"
+            class="car" id="car3">Añadir al carrito 300$</button>
+        </div>
+
+        <div class="cont-vapes">
+
+            <img src="assets/images/fondo3.png" alt="" class="vape-imagen">
+            <h2 class="vape-tittle">Liquido Watermelon</h2>
+            <p class="vape-text">Liquido electronico sabor Watermelon - 30 ml.</p>
+            <button 
+            onclick="añadirProducto('Liquido Uva')"
+            class="car" id="car4">Añadir al carrito 300$</button>
+        </div>
+
+    </div>
+
+    <!-- Contacto -->
+    <div class="vapes" id="p4">
+        <h1>Mantente en Contacto</h1>
+        <p>¡Estamos para atenderte!</p>
+    </div>
+    <div class="contacto">
+        <h2>Servicio al Cliente</h2>
+        <p>Correo: VubonicVapeShop@vubo.com</p>
+        <p>Telefono de Contacto: +52 81 2547 9856</p>
+        <p> Horarios: Lunes - Viernes</p>
+        <p>10:00 AM - 21:00 PM</p>
+    </div>
+
+    <footer>
+
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
