@@ -30,7 +30,7 @@ form.addEventListener('submit', (e) => {
 
             if(result.token){
                 localStorage.setItem('token', result.token)
-                window.location.replace("/");
+                window.location.replace("/vubonic-front/");
             } else {
                 alert('Correo i/o Contraseña incorrectos')
             }
